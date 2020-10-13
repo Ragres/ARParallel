@@ -1,43 +1,45 @@
-\name{Mejor_arima}
-\alias{Mejor_arima}
+\name{Mejor_Arima}
+\alias{Mejor_Arima}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
+\title{Parallel_Arma
+%%  ~~This function run a parallel cycle ~~
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+%%  ~~ With 3 parameters final_i (maximun p steps),final_j (maximum q) steps  and data (the time series to use) this function itereates over all the combinations of the p and q's in parallel to find the model with the lowest AIC~~
 }
 \usage{
-Mejor_arima(x)
+Parallel_Arma(final_i,final_j_data)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{final_i}{
+%%     ~~final_i is the maximun p steps on the AR model ~~
+}
+ \item{final_j}{
+%%     ~~final_j is the maximun q steps on the MA model ~~
+}
+\item{data}{
+%%     ~~data is the time series that will be modelled  ~~
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+%%  ~~ ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
+%%  ~it return a list of two elements
+%%  \item{comp1}{This is the best model }
+%%  \item{comp2 }{This is the AIC of the best model}
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+%% ~ ~
 }
 \author{
-%%  ~~who you are~~
+%%  ~~Victor Alanis~~
 }
 \note{
-%%  ~~further notes~~
+%%  ~~If aclarations needed please contact me~~
 }
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
@@ -45,7 +47,6 @@ Mejor_arima(x)
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,
 ##--	or do  help(data=index)  for the standard data sets.
-
 ## The function is currently defined as
 function (x)
 {
